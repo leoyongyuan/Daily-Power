@@ -1,2 +1,1 @@
-# -hhh
-记录每天学习的知识点
+# Daily Recode
