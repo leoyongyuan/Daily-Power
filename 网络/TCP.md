@@ -59,8 +59,10 @@
 
 第三次挥手：在业务信息发送完后，s端会发送FIN = 1，ACK = 1，ackseq = M + 1和 seq序列号k给c端。随后进入ack状态
 
-第四次挥手：c端在收到FIN = 1后，进行ACK核验。最后发送一个ACK = 1，ackseq = k + 1和seq序列号，进入等待2 * MSL状态。s端收到ACK后，也进入关闭状态，c端在2 * MSL时间过后也关闭，
-四次挥手结束。
+第四次挥手：c端在收到FIN = 1后，进行ACK核验。最后发送一个ACK = 1，ackseq = k + 1和seq序列号，进入等待2 * MSL状态。s端收到ACK后，也进入关闭状态，c端在2 * MSL时间过后也关闭，四次挥手结束。
+
+![image](https://user-images.githubusercontent.com/72189350/202832953-a97b9b05-141f-46af-a017-ba2649a18d53.png)
+
 
 ### 为什么关闭连接的需要四次挥手，而建立连接却只要三次握手呢，可不可以四次握手？
 
