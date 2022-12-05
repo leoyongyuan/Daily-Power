@@ -20,6 +20,12 @@
 
 ![image](https://user-images.githubusercontent.com/72189350/205595632-6e5a6fef-8063-4210-8014-64f293c8d0ee.png)
 
-
-
 ## Vue中nextTick()的原理和作用？
+
+nextTick 其原理就是利用 Promise，MutationObserver,setlmmediate,setTimeout的原生Javascript API,利用降级策略，来模拟宏任务/微任务的实现。
+
+其本质就是利用了Javascript的异步回调任务队列在实现Vue中的异步回调队列。
+
+所谓降级策略，就是Vue在内部实现的时候，对异步队列按顺序先使用Promise.then,MutationObserver 和 setlmmediate，最后实在没办法才用setTimeout。
+
+![image](https://user-images.githubusercontent.com/72189350/205668658-a3abb5e9-54c7-44a5-b739-64c0a3b06510.png)
