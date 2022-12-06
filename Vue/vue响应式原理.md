@@ -279,7 +279,7 @@ Watcher.prototype.update = function() {
 
 再vue中无非就是有一个Api，v-model。我们的实现逻辑也和编译模板时的{{}} 类似,因此直接编译模板再判断一下v-model即可。
 
-```Javascirpt
+```Javascript
 function Compile(el,vm) {
     // 获取DOM，并把DOM用文档碎片方式，移动到内存中操作
     vm.$el = document.querySelector(el);
