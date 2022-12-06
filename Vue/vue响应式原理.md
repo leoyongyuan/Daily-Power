@@ -360,3 +360,6 @@ vue是单向数据流，所谓的双向绑定其实就是v-on和v-bind结合起�
 <input v-model="value" />
 <input v-bind:value="value" v-on:input="value= $event.target.value" />
 ```
+
+## 补充
+[MVVM源码链接]()
