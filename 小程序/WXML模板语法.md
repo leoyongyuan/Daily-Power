@@ -9,7 +9,7 @@
 
 data: {
   type:'woman',
-}
+}    
 ```
 
 借助block包裹标签显示隐藏。
