@@ -117,7 +117,7 @@ Page({
     })
   },
   onUnload() {
-    this.storeBindings.detroyStoreBindings()
+    this.storeBindings.destroyStoreBindings()
   },
   addNuma(e) {
     this.updateNuma(e.target.dataset.step)
