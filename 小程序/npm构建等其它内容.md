@@ -100,7 +100,7 @@ export const store = observable({
 })
 ```
 
-**使用**
+**在页面中使用**
 ```Javascript
 import { createStoreBindings } from 'mobx-miniprogram-bindings'
 import { store } from '../../store/store'
@@ -127,6 +127,47 @@ Page({
   },
 })
 
+
+// wxml
+<view>{{numa}} + {{numb}} = {{add}}</view>
+<button bindtap="addNuma" data-step="{{1}}">numa + 1</button>
+<button bindtap="addNumb" data-step="{{1}}">numb + 1</button>
+```
+
+**在组件中使用**
+```Javascript
+import { storeBindingsBehavior } from 'mobx-miniprogram-bindings'
+import { store } from '../../store/store'
+
+Component({
+  /**
+   * 组件的behaviors结点
+   */
+  behaviors: [storeBindingsBehavior],
+  storeBindings: {
+    store,
+    fields: {
+      numa: 'numa',   // 前面的名字为组件自定义，后面为store中的变量
+      numb: 'numb',
+      add: 'add',
+    },
+    actions: {
+      updateNuma:'updateNuma',
+      updateNumb:'updateNumb',
+    },
+  },
+  /**
+   * 组件的方法列表
+   */
+  methods: {
+    addNuma(e) {
+      this.updateNuma(e.target.dataset.step)
+    },
+    addNumb(e) {
+      this.updateNumb(e.target.dataset.step)
+    },
+  }
+})
 
 // wxml
 <view>{{numa}} + {{numb}} = {{add}}</view>
