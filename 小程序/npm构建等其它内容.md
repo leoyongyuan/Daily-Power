@@ -201,6 +201,12 @@ Component({
     "pages/info/info",
     "pages/shoplist/shoplist"
   ],
+  "preloadRule":{   // 分包预下载
+    "pages/contact/contact":{  // 设置这个页面，一旦点入这个页面，开始预下载pkgA分包的内容
+      "packages": ["pkgA"],
+      "network": "all"    // 所有网络环境都可下载，wifi / all ，代表wifi环境和所有网络环境
+    }
+  },
   "subpackages": [   // 分包
     {
       "root": "pkgA",  // 分包1.文件名
