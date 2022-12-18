@@ -70,7 +70,7 @@ async getInfo() {
 ## 全局数据共享
 类似vue中的vuex，react中的redux。
 
-**安装 **
+**安装**
 - `npm install --save mobx-miniprogram@4.13.2`创建store实例对象
 - `npm install --save mobx-miniprogram-bindings@1.2.1`把store中的共享数据取出来，绑定到组件中
 
@@ -174,3 +174,49 @@ Component({
 <button bindtap="addNuma" data-step="{{1}}">numa + 1</button>
 <button bindtap="addNumb" data-step="{{1}}">numb + 1</button>
 ```
+
+## 分包
+分包就是把一个完整的小程序项目，按需划分为不同的子包，构建时打包成不同的分包，用户在使用时可以按需加载。
+
+把打包后的资源分成一个主包+多个分包。
+![image](https://user-images.githubusercontent.com/72189350/208286413-52933a5c-6878-4a71-ad87-cd271ff8ee31.png)
+
+
+**好处：**
+- 优化小程序下载时间
+- 方便团队协作
+
+**规则：**
+- tabBar 页面需要放在主包
+- 总体积不可超过 16M
+- 单个包不可超过2M
+
+**使用配置**
+```JSON
+{
+  "pages":[    // 主包
+    "pages/home/home",
+    "pages/message/message",
+    "pages/contact/contact",
+    "pages/info/info",
+    "pages/shoplist/shoplist"
+  ],
+  "subpackages": [   // 分包
+    {
+      "root": "pkgA",  // 分包1.文件名
+      "pages": [       
+        "pages/cat/cat",
+        "pages/dog/dog"
+      ]
+    },
+    {
+      "root": "pkgB",  // 分包2.文件名
+      "name": "p2",    // 设置别名
+      "pages": [
+        "pages/apple/apple"
+      ]
+    }
+  ],
+}
+```
+
