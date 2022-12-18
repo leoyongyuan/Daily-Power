@@ -214,7 +214,8 @@ Component({
       "name": "p2",    // 设置别名
       "pages": [
         "pages/apple/apple"
-      ]
+      ],
+      "independent": true //  设置为独立分包 ,独立分包就是可以独立主包之外运行
     }
   ],
 }
