@@ -75,7 +75,8 @@ flex 有三种属性，flex-grow 可拉伸 flex-shrink 可压缩 flex-basis 当�
 }
 ```
 
-![image](https://user-images.githubusercontent.com/72189350/210173781-6b37e2c3-02ee-4bef-aa57-13d16604356c.png)
+![image](https://user-images.githubusercontent.com/72189350/210173883-b60a85f4-cdd5-410a-9679-1115d4a9250c.png)
+
 
 上图鲜明地体现了flex:1和flex:auto的区别，虽然都是充分分配容器的尺寸
 
