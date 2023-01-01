@@ -38,7 +38,7 @@ flex 有三种属性，flex-grow 可拉伸 flex-shrink 可压缩 flex-basis 当�
 
 结合flex属性值的描述，我们可以得出flex:1和flex:auto的行为表现：
 
->> 元素尺寸可以弹性增大，也可以弹性变小，具有十足的弹性，但是flex:1在尺寸不足时会优先最小化内容尺寸，flex:auto在尺寸不足时会优先最大化内容尺寸。
+> 元素尺寸可以弹性增大，也可以弹性变小，具有十足的弹性，但是flex:1在尺寸不足时会优先最小化内容尺寸，flex:auto在尺寸不足时会优先最大化内容尺寸。
 ```
 <h4>flex:1</h4>
 <div class="container flex-1">
