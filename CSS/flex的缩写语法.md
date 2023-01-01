@@ -86,3 +86,5 @@ flex 有三种属性，flex-grow 可拉伸 flex-shrink 可压缩 flex-basis 当�
 - 当希望元素充分利用剩余空间，同时不会侵占其他元素应有的宽度的时候，适合使用flex:1
 - 当希望元素充分利用剩余空间，但是各自的尺寸按照各自内容进行分配的时候，适合使用flex:auto
 
+**参考链接：**
+https://www.zhangxinxu.com/wordpress/2020/10/css-flex-0-1-none/
