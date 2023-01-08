@@ -143,12 +143,6 @@ div {
 ```
 <div class="block"></div>
 
-div {
-    width: 141px;
-    height: 100px;
-    margin: auto;
-}
-
 .block {
     display: inline-block;
     height: 100px;
@@ -164,9 +158,9 @@ div {
     top: 0;
     right: 0;
     bottom: 0;
-    background: blue; 
-    /* 旋转原点在(0, 0），旋转90度 */
-    transform-origin: 0 0;
+    background: deeppink; 
+    /* 旋转原点在左下，旋转45度 */
+    transform-origin: left bottom;
     transform: rotate(45deg);
 }
 ```
