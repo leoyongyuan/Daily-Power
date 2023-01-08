@@ -1,6 +1,4 @@
-# CSS实现三角形
-
-[co佬文章地址](https://juejin.cn/post/6950081305560219679#heading-3)
+# [CSS实现三角形](https://juejin.cn/post/6950081305560219679#heading-3)
 
 ## border绘制
 
